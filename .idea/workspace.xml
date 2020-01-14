@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a8294a7-8e0a-46c9-89cc-6994a7ffee4b" name="Default Changelist" comment="" />
+    <list default="true" id="2f809296-353a-4bcc-86ae-2a39c87ba25c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,14 +9,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1W2sUPbPDdd6a9QxHcAfPMDIQPL" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1W5kVMZ5DXgYsAlmJDLNaIRCi3c" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../09-heartbeat" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RunDashboard">
@@ -36,14 +35,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8a8294a7-8e0a-46c9-89cc-6994a7ffee4b" name="Default Changelist" comment="" />
-      <created>1578359038642</created>
+      <changelist id="2f809296-353a-4bcc-86ae-2a39c87ba25c" name="Default Changelist" comment="" />
+      <created>1578446865926</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1578359038642</updated>
-      <workItem from="1578359044123" duration="1893000" />
-      <workItem from="1578443570965" duration="1837000" />
-      <workItem from="1578875416574" duration="32000" />
+      <updated>1578446865926</updated>
+      <workItem from="1578446867316" duration="182000" />
     </task>
     <servers />
   </component>
@@ -55,9 +52,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>

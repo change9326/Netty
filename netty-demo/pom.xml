@@ -12,6 +12,9 @@
         <module>01_primary</module>
         <module>02_socket</module>
         <module>03_unpacking</module>
+        <module>10-rpc-server</module>
+        <module>10-rpc-api</module>
+        <module>10-rpc-client</module>
     </modules>
 
     <properties>

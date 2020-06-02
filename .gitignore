@@ -38,7 +38,6 @@
 09-heartbeat2/target/generated-sources/
 09-heartbeat2/target/generated-test-sources/
 09-heartbeat2/target/test-classes/
-NettyPro/src/
 netty-demo/01_primary/src/main/resources/
 netty-demo/01_primary/src/test/
 netty-demo/01_primary/target/generated-sources/

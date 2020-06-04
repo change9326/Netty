@@ -3,8 +3,27 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/01-primary/01-primary.iml" filepath="$PROJECT_DIR$/01-primary/01-primary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-stickybag/03-stickybag.iml" filepath="$PROJECT_DIR$/03-stickybag/03-stickybag.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-unpacking/03-unpacking.iml" filepath="$PROJECT_DIR$/03-unpacking/03-unpacking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-delimiterBasedFrameDecoder/04-delimiterBasedFrameDecoder.iml" filepath="$PROJECT_DIR$/04-delimiterBasedFrameDecoder/04-delimiterBasedFrameDecoder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-fixedLengFrameDecoder/04-fixedLengFrameDecoder.iml" filepath="$PROJECT_DIR$/04-fixedLengFrameDecoder/04-fixedLengFrameDecoder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-lengthFieldBasedFrameDecoder/04-lengthFieldBasedFrameDecoder.iml" filepath="$PROJECT_DIR$/04-lengthFieldBasedFrameDecoder/04-lengthFieldBasedFrameDecoder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07-idle/07-idle.iml" filepath="$PROJECT_DIR$/07-idle/07-idle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09-heartbeat/09-heartbeat.iml" filepath="$PROJECT_DIR$/09-heartbeat/09-heartbeat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09-heartbeat2/09-heartbeat2.iml" filepath="$PROJECT_DIR$/09-heartbeat2/09-heartbeat2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11-dubbo-api/11-dubbo-api.iml" filepath="$PROJECT_DIR$/11-dubbo-api/11-dubbo-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11-dubbo-client/11-dubbo-client.iml" filepath="$PROJECT_DIR$/11-dubbo-client/11-dubbo-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11-dubbo-server/11-dubbo-server.iml" filepath="$PROJECT_DIR$/11-dubbo-server/11-dubbo-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Netty.iml" filepath="$PROJECT_DIR$/.idea/Netty.iml" />
       <module fileurl="file://$PROJECT_DIR$/NettyPro/NettyPro.iml" filepath="$PROJECT_DIR$/NettyPro/NettyPro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-dubbo/dubbo-api/dubbo-api.iml" filepath="$PROJECT_DIR$/my-dubbo/dubbo-api/dubbo-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-dubbo/dubbo-client/dubbo-client.iml" filepath="$PROJECT_DIR$/my-dubbo/dubbo-client/dubbo-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-dubbo/dubbo-server/dubbo-server.iml" filepath="$PROJECT_DIR$/my-dubbo/dubbo-server/dubbo-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-dubbo/my-dubbo.iml" filepath="$PROJECT_DIR$/my-dubbo/my-dubbo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-rpc/my-rpc.iml" filepath="$PROJECT_DIR$/my-rpc/my-rpc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-rpc/rpc-api/rpc-api.iml" filepath="$PROJECT_DIR$/my-rpc/rpc-api/rpc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-rpc/rpc-client/rpc-client.iml" filepath="$PROJECT_DIR$/my-rpc/rpc-client/rpc-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/my-rpc/rpc-server/rpc-server.iml" filepath="$PROJECT_DIR$/my-rpc/rpc-server/rpc-server.iml" />
     </modules>
   </component>
 </project>

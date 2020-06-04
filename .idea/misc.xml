@@ -8,6 +8,19 @@
       <list>
         <option value="$PROJECT_DIR$/NettyPro/pom.xml" />
         <option value="$PROJECT_DIR$/01-primary/pom.xml" />
+        <option value="$PROJECT_DIR$/11-dubbo-server/pom.xml" />
+        <option value="$PROJECT_DIR$/11-dubbo-client/pom.xml" />
+        <option value="$PROJECT_DIR$/11-dubbo-api/pom.xml" />
+        <option value="$PROJECT_DIR$/03-stickybag/pom.xml" />
+        <option value="$PROJECT_DIR$/03-unpacking/pom.xml" />
+        <option value="$PROJECT_DIR$/04-delimiterBasedFrameDecoder/pom.xml" />
+        <option value="$PROJECT_DIR$/04-fixedLengFrameDecoder/pom.xml" />
+        <option value="$PROJECT_DIR$/04-lengthFieldBasedFrameDecoder/pom.xml" />
+        <option value="$PROJECT_DIR$/07-idle/pom.xml" />
+        <option value="$PROJECT_DIR$/09-heartbeat/pom.xml" />
+        <option value="$PROJECT_DIR$/09-heartbeat2/pom.xml" />
+        <option value="$PROJECT_DIR$/my-rpc/pom.xml" />
+        <option value="$PROJECT_DIR$/my-dubbo/pom.xml" />
       </list>
     </option>
   </component>

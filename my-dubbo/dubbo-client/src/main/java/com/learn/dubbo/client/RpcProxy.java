@@ -1,5 +1,6 @@
-package com.learn.rpc.client;
+package com.learn.dubbo.client;
 
+import com.learn.dubbo.discovery.ServiceDiscoveryImpl;
 import com.learn.rpc.bean.InvokeMessage;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -34,7 +35,6 @@ public class RpcProxy {
                     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                         // 若调用的是Object中的方法，则直接进行本地调用
                         if(Object.class.equals(method.getDeclaringClass())) {
-                            // 本地调用
                             return method.invoke(this, args);
                         }
                         // 进行远程调用
@@ -43,10 +43,11 @@ public class RpcProxy {
                 });
     }
 
-    private static Object rpcInvoke(Class<?> clazz, Method method, Object[] args) throws InterruptedException {
+    private static Object rpcInvoke(Class<?> clazz, Method method, Object[] args) throws Exception {
 
         RpcClientHandler handler = new RpcClientHandler();
         NioEventLoopGroup loopGroup = new NioEventLoopGroup();
+
         try {
             Bootstrap bootstrap = new Bootstrap();
             bootstrap.group(loopGroup)
@@ -63,7 +64,17 @@ public class RpcProxy {
                             pipeline.addLast(handler);
                         }
                     });
-            ChannelFuture future = bootstrap.connect("localhost", 8888).sync();
+
+            ServiceDiscoveryImpl serviceDiscovery = new ServiceDiscoveryImpl();
+            String serverAddress = serviceDiscovery.discovery(clazz.getName());
+            // 若zk 中不存在该服务，则返回null
+            if(serverAddress == null){
+                return null;
+            }
+            String ip = serverAddress.split(":")[0];
+            String portStr = serverAddress.split(":")[1];
+
+            ChannelFuture future = bootstrap.connect(ip, Integer.valueOf(portStr)).sync();
 
             // 创建并初始化调用信息
             InvokeMessage message = new InvokeMessage();

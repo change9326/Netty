@@ -7,6 +7,7 @@ import java.util.Random;
 public class RandomLoadBalance implements LoadBalance {
     @Override
     public String choose(List<String> servers) {
+
         return servers.get(new Random().nextInt(servers.size()));
     }
 }

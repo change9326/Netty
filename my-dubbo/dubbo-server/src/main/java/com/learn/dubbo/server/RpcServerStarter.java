@@ -1,4 +1,6 @@
-package com.learn.rpc.server;
+package com.learn.dubbo.server;
+
+import com.learn.dubbo.registry.ZkRegistryCenter;
 
 /**
  * @author yujiaqi
@@ -7,9 +9,12 @@ package com.learn.rpc.server;
  */
 public class RpcServerStarter {
     public static void main(String[] args) throws Exception {
+        ZkRegistryCenter registryCenter = new ZkRegistryCenter();
+        String serverAddress="127.0.0.1:8888";
+        String providerPackage="com.learn.dubbo.provider";
+
         RpcServer server = new RpcServer();
-        // 将指定包下的提供者发布到服务器
-        server.publish("com.learn.rpc.service");
+        server.publish(registryCenter,serverAddress,providerPackage);
         // 启动服务器
         server.start();
     }

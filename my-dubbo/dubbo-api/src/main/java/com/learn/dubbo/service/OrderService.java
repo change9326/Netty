@@ -5,11 +5,9 @@ package com.learn.dubbo.service;
  * @date 2020-06-03 11:16
  * @description
  */
-public interface SomeService {
+public interface OrderService {
     /**
-     * hello
-     * @param name
-     * @return
+     * 创建订单
      */
-    String hello(String name);
+    String createOrder(Long productId);
 }

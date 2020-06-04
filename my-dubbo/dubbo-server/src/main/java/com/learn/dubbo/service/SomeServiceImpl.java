@@ -1,4 +1,4 @@
-package com.learn.rpc.service;
+package com.learn.dubbo.service;
 
 /**
  * @author yujiaqi

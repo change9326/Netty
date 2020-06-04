@@ -1,7 +1,8 @@
-package com.learn.rpc.consumer;
+package com.learn.dubbo.consumer;
 
-import com.learn.rpc.client.RpcProxy;
-import com.learn.rpc.service.SomeService;
+
+import com.learn.dubbo.client.RpcProxy;
+import com.learn.dubbo.service.SomeService;
 
 /**
  * @author yujiaqi
@@ -11,8 +12,11 @@ import com.learn.rpc.service.SomeService;
 public class SomeConsumer {
 
     public static void main(String[] args) {
-        SomeService service  = RpcProxy.create(SomeService.class);
-        System.out.println(service.hello("Tom~喵喵"));
-        System.out.println(service.hashCode());
+
+        SomeService service = RpcProxy.create(SomeService.class);
+        if(service != null) {
+            System.out.println(service.hello("易点租"));
+        }
+
     }
 }

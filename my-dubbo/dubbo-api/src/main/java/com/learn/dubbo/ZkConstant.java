@@ -10,7 +10,7 @@ public class ZkConstant {
     /**
      * zk集群地址
      */
-    public final static String ZK_CLUSTER = "zkOS:2181";
+    public final static String ZK_CLUSTER = "127.0.0.1:2181";
     /**
      * Dubbo在zk中的根节点
      */

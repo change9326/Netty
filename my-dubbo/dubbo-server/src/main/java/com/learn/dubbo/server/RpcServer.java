@@ -1,5 +1,6 @@
-package com.learn.rpc.server;
+package com.learn.dubbo.server;
 
+import com.learn.dubbo.registry.RegistryCenter;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -37,29 +38,38 @@ public class RpcServer {
      */
     private Map<String,Object> registryMap=new HashMap<>();
 
+    private String serviceAddress;
+
     /**
      * 服务发布：将服务名称与对应包中实现类的实例的映射关系写入到注册中心的过程
+     * @param registryCenter
+     * @param serviceAddress
      * @param providerPackage
      */
-    public void publish(String providerPackage) throws Exception {
+    public void publish(RegistryCenter registryCenter,String serviceAddress,String providerPackage) throws Exception {
 
         // 将指定包下的所有实现类名称写入到classCache集合
         getProviderClass(providerPackage);
         // 将服务提供者注册到注册表
-        doRegister();
+        doRegister(registryCenter,serviceAddress);
+        this.serviceAddress=serviceAddress;
+
     }
 
     /**
      * 将服务提供者注册到注册表
      */
-    private void doRegister() throws Exception {
+    private void doRegister(RegistryCenter registryCenter,String serviceAddress) throws Exception {
         // 若没有提供者，则无需注册
         if(classCache.isEmpty()){return;}
         // 遍历classCache，获取到实现类所实现的接口名称，及创建该实现类对应实例
         for(String className : classCache){
             // 加载当前遍历的类
             Class<?> clazz = Class.forName(className);
+            // 其key为接口名，value为实例类实例
             registryMap.put(clazz.getInterfaces()[0].getName(),clazz.newInstance());
+            // 向zk 中注册提供者，为了对外暴露提供者主机
+            registryCenter.register(clazz.getInterfaces()[0].getName(),serviceAddress);
         }
     }
 
@@ -85,9 +95,13 @@ public class RpcServer {
                 classCache.add(providerPackage+"."+fileName);
             }
         }
-        System.out.printf("classCache = " + classCache);
+        System.out.println("classCache = " + classCache.toString());
     }
 
+    /**
+     * 启动服务
+     * @throws InterruptedException
+     */
     public void start() throws InterruptedException {
         NioEventLoopGroup bossGroup = new NioEventLoopGroup();
         NioEventLoopGroup workerGroup = new NioEventLoopGroup();
@@ -106,8 +120,11 @@ public class RpcServer {
                             pipeline.addLast(new RpcServerHandler(registryMap));
                         }
                     });
-            ChannelFuture future = bootstrap.bind(8888).sync();
-            System.out.println("服务器已启动");
+            String ip = serviceAddress.split(":")[0];
+            String portStr = serviceAddress.split(":")[1];
+
+            ChannelFuture future = bootstrap.bind(ip, Integer.valueOf(portStr)).sync();
+            System.out.println("微服务已注册成功");
             future.channel().closeFuture().sync();
         }finally {
             bossGroup.shutdownGracefully();

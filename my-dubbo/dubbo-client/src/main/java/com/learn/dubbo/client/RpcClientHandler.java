@@ -1,4 +1,4 @@
-package com.learn.rpc.client;
+package com.learn.dubbo.client;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
